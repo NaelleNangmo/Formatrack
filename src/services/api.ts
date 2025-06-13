@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:3001/api';
+const API_BASE_URL =  'http://localhost:50545/api';
 
 // Configuration d'axios
 const api = axios.create({
@@ -66,7 +66,7 @@ export const clientService = {
     return response.data;
   },
 
-  create: async (clientData: any) => {
+  create: async (clientData: never) => {
     const response = await api.post('/clients', clientData);
     return response.data;
   },
